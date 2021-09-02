@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:fragment="layout(title, body)">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">Layout</title>
+    <link rel="stylesheet" href="../../static/css/layout.css" th:href="@{/css/layout.css}">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div id="logo">
+            <img src="../../static/images/svg/diary.svg" th:src="@{/images/svg/diary.svg}"
+                 id="header-icon" alt="diary-icon">
+            <h2 id="header-name" class="name">DiaryApp</h2>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">To-Do</a></li>
+                <li><a href="#">Notes</a></li>
+                <li><a href="#">Calendar</a></li>
+            </ul>
+        </nav>
+        <a href="#"><button>About</button></a>
+    </header>
+
+    <th:block th:include="${body}"/>
+
+    <footer>
+        <h2 id="footer-name">DiaryApp</h2>
+        <img src="../../static/images/svg/diary.svg" th:src="@{/images/svg/diary.svg}"
+             id="footer-icon" alt="diary-icon">
+        <div>
+            <ul class="footer-pages">
+                <li><a href="#">
+                    <h4 class="twitter">♣</h4>
+                </a></li>
+                <li><a href="#">
+                    <h4 class="github">♦</h4>
+                </a></li>
+                <li><a href="#">
+                    <h4 class="linkedin">♥</h4>
+                </a></li>
+                <!--<li><a href="#">♠</a></li>-->
+            </ul>
+        </div>
+    </footer>
+    <!--Footer-->
+</body>
+</html>

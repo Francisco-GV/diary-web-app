@@ -1,0 +1,56 @@
+:root {
+    /*--main-color: rgba(0, 136, 169, 1);*/
+    /*--main-color-hover: rgba(0, 136, 169, 0.7);*/
+    --main-color-1: rgba(152, 25, 47, 1);
+    --main-color-2: rgba(25, 84, 152, 1);
+    --main-color-1-hover: rgba(152, 25, 47, 0.7);
+    --main-color-2-hover: rgba(25, 84, 152, 0.7);
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #222;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links > li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav-links > li > a {
+    transition: all 0.45s ease 0s;
+}
+
+.nav-links > li > a:hover {
+    color: var(--main-color-1);
+}
+
+button {
+    padding: 9px 25px;
+    background-color: var(--main-color-1);
+    /*background: linear-gradient(to bottom left, var(--main-color-1), var(--main-color-2));*/
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.45s ease 0s;
+}
+
+button:hover {
+    background-color: var(--main-color-1-hover);
+    /*background: linear-gradient(to bottom left, var(--main-color-1-hover), var(--main-color-2-hover));*/
+}
